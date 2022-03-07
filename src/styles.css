@@ -1,1 +1,150 @@
-/* You can add global styles to this file, and also import other style files */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+::-moz-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+input {
+  text-decoration: none;
+  text-align: left;
+  font-size: 1.25em;
+  text-decoration-color: blue;
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: "montserrat", sans-serif;
+  margin-left: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body {
+  margin: 0;
+  border: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  background-repeat: no-repeat;
+  background: mediumspringgreen;
+  background-image: -moz-linear-gradient(
+    95deg,
+    mediumspringgreen -10%,
+    dodgerblue 100%
+  );
+  background-image: -webkit-linear-gradient(
+    95deg,
+    mediumspringgreen -10%,
+    dodgerblue 100%
+  );
+  background-image: linear-gradient(
+    -10deg,
+    mediumspringgreen -10%,
+    dodgerblue 100%
+  );
+  background-attachment: fixed;
+}
+
+.relatorio {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  max-width: 1000px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #224783;
+}
+.navBarTitle {
+  max-width: 540px;
+  color: white;
+}
+.navBarImage {
+  width: 15%;
+  margin-right: -60px;
+}
+
+.dados {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dadosTitle {
+  color: #224783;
+  font-size: 2em;
+}
+.dadosItem {
+  display: flex;
+  margin-bottom: 0;
+}
+.lineDados {
+  background-color: #224783;
+}
+.lineItem {
+  margin: 0;
+  margin-right: 3%;
+  background-color: #224783;
+}
+.dadosBox1 {
+  padding-left: -10%;
+  margin-left: 10%;
+}
+.dadosBox2 {
+  padding-left: -10%;
+}
+
+.tabelaNotas {
+  display: flex;
+  justify-content: center;
+}
+.tabela {
+  table-layout: auto;
+  width: 70%;
+}
+.menuTabelaAtiv {
+  background-color: #224783;
+  padding: 100px;
+}
+.itemTabelaAtiv {
+  background-color: #cdd3d8;
+}
+.inputNotas {
+  text-align: center;
+  background-color: #cdd3d8;
+}
+.ativTabela {
+  text-align: left;
+  font-size: 1.1em;
+  padding-left: 10px;
+}
+
+.notasAddTitle {
+  margin-bottom: -5px;
+  color: #224783;
+  font-size: 1.5em;
+}
+.notasAddTexto {
+  font-size: 24px;
+  color: #224783;
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+}
