@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as htmlToImage from 'html-to-image';
+import { Avaliador } from 'src/models/avaliador.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,11 @@ import * as htmlToImage from 'html-to-image';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  public aval = Avaliador;
+  public avalNome: string = '';
+  public avalPatente: string = '';
+  public avalPassaporte: number = 0;
+
   title = 'relatorio';
 
   generateImage() {
@@ -26,7 +32,32 @@ export class AppComponent {
       .catch(function (error) {
         console.error('Algo deu errado, avise o Junyo#3633!', error);
       });
+
+    this.salvar();
   }
 
-  constructor() {}
+  constructor() {
+    this.carregar();
+  }
+
+  salvar() {
+    localStorage.setItem('avalNome', this.avalNome);
+    localStorage.setItem('avalPatente', this.avalPatente);
+    localStorage.setItem('avalPassaporte', JSON.stringify(this.avalPassaporte));
+  }
+
+  carregar() {
+    if (localStorage.getItem('avalNome')) {
+      this.avalNome = localStorage.getItem('avalNome') || '';
+    }
+    if (localStorage.getItem('avalPatente')) {
+      this.avalPatente = localStorage.getItem('avalPatente') || '';
+    }
+
+    if (localStorage.getItem('avalPassaporte')) {
+      this.avalPassaporte = JSON.parse(
+        localStorage.getItem('avalPassaporte') || ''
+      );
+    }
+  }
 }

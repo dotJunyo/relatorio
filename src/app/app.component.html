@@ -1,6 +1,10 @@
 <div class="relatorio" id="image-section">
   <header class="navBar">
-    <img class="navBarImage" src="../assets/pmerjLogo.png" alt="" />
+    <img
+      class="navBarImage"
+      src="https://i.ibb.co/gZTvZCv/pmerj-Logo.png"
+      alt=""
+    />
     <h1 class="navBarTitle">POLÍCIA MILITAR DO ESTADO DO RIO DE JANEIRO</h1>
   </header>
 
@@ -26,15 +30,30 @@
     <div class="dadosBox2">
       <div class="dadosItem">
         <h3 class="h3Dados">Avaliador:</h3>
-        <input type="text" />
+        <input
+          type="text"
+          [(ngModel)]="avalNome"
+          id="avalNome"
+          (ngModelChange)="salvar()"
+        />
       </div>
       <div class="dadosItem">
         <h3 class="h3Dados">Patente:</h3>
-        <input type="text" />
+        <input
+          type="text"
+          [(ngModel)]="avalPatente"
+          id="avalPatente"
+          (ngModelChange)="salvar()"
+        />
       </div>
       <div class="dadosItem">
         <h3 class="h3Dados">Passaporte:</h3>
-        <input type="number" />
+        <input
+          type="number"
+          [(ngModel)]="avalPassaporte"
+          id="avalPassaporte"
+          (ngModelChange)="salvar()"
+        />
       </div>
     </div>
   </div>
@@ -99,5 +118,9 @@
 </div>
 
 <button class="btnDownload" type="button" (click)="generateImage()">
-  <img class="imgDownload" src="../assets/btnDownload.png" alt="Download" />
+  <img
+    class="imgDownload"
+    src="https://i.ibb.co/VQpdhCS/btn-Download.png"
+    alt="Download"
+  />
 </button>
