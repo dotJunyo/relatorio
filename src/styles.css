@@ -148,3 +148,19 @@ body {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 15px;
 }
+
+.imgDownload {
+  max-width: 100px;
+}
+.btnDownload {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+button::hover {
+  cursor: pointer;
+}

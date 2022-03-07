@@ -1,4 +1,4 @@
-<div class="relatorio">
+<div class="relatorio" id="image-section">
   <header class="navBar">
     <img class="navBarImage" src="../assets/pmerjLogo.png" alt="" />
     <h1 class="navBarTitle">POLÍCIA MILITAR DO ESTADO DO RIO DE JANEIRO</h1>
@@ -93,7 +93,11 @@
       class="notasAddTexto"
       cols="50"
       rows="13"
-      maxlength="600"
+      maxlength="500"
     ></textarea>
   </div>
 </div>
+
+<button class="btnDownload" type="button" (click)="generateImage()">
+  <img class="imgDownload" src="../assets/btnDownload.png" alt="Download" />
+</button>
